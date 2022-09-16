@@ -13,32 +13,49 @@
     --title-text-color: #212121;
     --accent-color: #2196F3;
     --primary-bg-color: #FFFFFF;
+    --primary-section-color:  #F5F5F5;
+    --section-bg-color: #F5F4FA;
+    --logo-color: #000000;
+    --section-color:  #2F303A;
+    --footer-link-color: rgba(255, 255, 255, 0.6);
+    --button-color: #188CE8;
 }
 
 body {
-    background-color: #F5F5F5;
+    background-color: var(--primary-bg-color);
     color: var(--primary-text-color);
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.03em;
  }
 
-
-
-
- .logo {
-    color: #000000;
-    font-family: 'Raleway';
+.logo {
+    color: var(--logo-color);
+    font-family: 'Raleway', sans-serif;
     font-size: 26px;
     line-height: 1.19;
     text-decoration: none;
  }
 
- .logo span{
+.logo > span {
     color: var(--accent-color);
 }
+
 .list {
     list-style: none;
     text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  margin: -1px;
 }
 
 /* //////////////////////////////////////////////////// */
@@ -53,13 +70,15 @@ body {
     text-decoration: none;
  }
 
-.site-nav .link {
-    color: var(--title-text-color);
+.site-nav .link.current {
+    color: var(--accent-color);
 }
+
 .site-nav .link:hover, 
 .site-nav .link:focus {
     color: var(--accent-color);
 } 
+
 .auth-nav a {
     font-weight: 500;
     font-size: 14px;
@@ -68,6 +87,16 @@ body {
     color: var(--primary-text-color);
     text-decoration: none;  
 }
+
+.auth-nav  .item {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+    text-decoration: none;  
+}
+
 .auth-nav  .link:hover,
 .auth-nav  .link:focus {
     color: var(--accent-color);
@@ -75,20 +104,23 @@ body {
 
 /* hero */
 .section-hero{
-    background-color: #2F303A;
+    background-color: var(--section-color);
 }
+
 .hero-title {
-    color: #FFFFFF;
+    color: var(--primary-bg-color);
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
     text-align: center;
     letter-spacing: 0.06em;
 }
+
 /* section */
 .section {
-    background-color: #F5F4FA;;
+    background-color: var(--primary-bg-color);
 }
+
 .section-title {
     color: var(--title-text-color);
     font-weight: 700;
@@ -96,18 +128,21 @@ body {
     line-height: 1.16;
     text-align: center;
 }
+
 /* features */
 .features-list .title {
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
+    text-transform: uppercase;
 }
+
 .features-list .text {
-    font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
 }
+
 /* work */
 .work-list .title {
     font-weight: 500;
@@ -115,12 +150,20 @@ body {
     line-height: 1.18;
     color: var(--title-text-color);
 }
+
 .work-list .text {
-    font-weight: 400;
     font-size: 16px;
     line-height: 1.18;
     color: var(--primary-text-color);
 } 
+
+.work-item {
+    background-color: var(--primary-bg-color);
+}
+
+.section-work {
+background-color: var(--section-bg-color);
+}
 
 /* button */
 .button {
@@ -129,10 +172,16 @@ body {
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.06em;
-    
     color: var(--primary-bg-color);
     background-color: var(--accent-color);
-    }
+    cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+    color: var(--button-color);
+}
+
     /* footer */
 .footer .link{
     font-style: normal;
@@ -141,22 +190,26 @@ body {
     color: var(--primary-bg-color);
     text-decoration: none;
 }
+
 .footer .link-info {
     font-style: normal;
     font-size: 14px;
     line-height: 1.71;
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--footer-color);
     text-decoration: none;
 }
+
 .footer .logo {
     color: var(--primary-bg-color);
 }
+
 .footer {
-    background-color: var(--title-text-color);
+    background-color: var(--section-color);
 }
+
 .footer .link:hover,
 .footer .link:focus {
-     color: #000000;
+     color: var(--accent-color);
 }
 
 /* Styles Portfolio */
@@ -170,27 +223,25 @@ body {
 }
 
 .hero-items .text {
-     font-weight: 400;
      font-size: 16px;
      line-height: 1.87;
      color: var(--primary-text-color);
-    }
+}
 
 .btn {
-     cursor: pointer;
+     font-family: inherit;
      font-weight: 500;
      font-size: 16px;
      line-height: 1.62;
      text-align: center;
      color: var(--title-text-color);
-     background-color: transparent;
+     background-color: var(--section-bg-color);
+     border-color: transparent;
+     cursor: pointer;
 }
-.btns {
-  cursor: pointer;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-  text-align: center;
-  background-color: var(--accent-color);
-  color: var(--primary-bg-color);
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--accent-color);
+    color: var(--primary-bg-color);
  }
