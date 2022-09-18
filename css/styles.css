@@ -35,6 +35,16 @@ body {
     line-height: 1.19;
     text-decoration: none;
  }
+.site-nav .logo {
+    color: var(--logo-color);
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    line-height: 1.19;
+    text-decoration: none;  
+}
+.logo > span {
+    color: var(--accent-color);
+}
 
 .logo > span {
     color: var(--accent-color);
@@ -77,7 +87,7 @@ body {
 .site-nav .link.current:hover,
 .site-nav .link.current:focus {
     color: inherit;
-    color: var(--logo-color);
+    color: var(--accent-color);
 }
 
 .site-nav .link:hover, 
@@ -182,14 +192,13 @@ body {
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.06em;
-    color: var(--title-text-color);
-    background-color: var(--section-bg-color);
-    border-color: transparent;
+    color: var(--primary-bg-color);
+    background-color: var(--accent-color);
     cursor: pointer;
 }
 
-.button:hover,
-.button:focus {
+.section-hero .button:hover,
+.section-hero .button:focus {
     background-color: var(--button-color);
 }
 
